@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
 
     namesHTML.push(`<h1>Full Cycle Rocks!</h1>`)
 
-    connection.query("SELECT * FROM PEOPLE", function(err, result, fields) {
+    connection.query("SELECT * FROM people", function(err, result, fields) {
         if(err) throw err;
 
         result.map(people => { namesHTML.push(`<p>${people.name}</p>`); })
